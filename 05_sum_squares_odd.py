@@ -4,7 +4,13 @@ question_05 = ''' Python script that takes a positive integer n and returns the 
 
 
 def sum_squares_odd(n):
-  pass
+  temp=0
+  if n>1:
+    for i in range(1,n,2):
+      temp = temp + i**2
+    return temp
+  else:
+    return 0
         
 
 
@@ -22,7 +28,7 @@ class TestSumSquaresOdd(unittest.TestCase):
     self.assertEqual(sum_squares_odd(2), 1)
     
   def test_05(self):
-    self.assertEqual(sum_squares(100), 166650)
+    self.assertEqual(sum_squares_odd(100), (166650))
   
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
