@@ -5,7 +5,13 @@ that is, n = mi for some integer i, and False otherwise.'''
 
 
 def is_multiple(n, m):
-    pass
+    if n<m or m==0:
+        return False
+    else:
+        if n%m==0:
+            return True
+        else:
+            return False
         
 
 
@@ -27,6 +33,5 @@ class TestIsMultiple(unittest.TestCase):
         self.assertEqual(is_multiple(0,3),False) 
 
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     unittest.main(verbosity=2)
-
